@@ -1,0 +1,49 @@
+$unit: 1.5rem
+
+*
+  margin: 0
+  padding: 0
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+html
+  font-size: 100%
+  line-height: $unit
+  font-family: sans-serif
+
+h1
+  font-size: 2rem
+
+.quality-section
+  width: $unit * 23
+  margin: 0 auto
+
+header
+  position: relative
+  background: dimgray
+  color: white
+  h1
+    padding: $unit 0
+    text-align: center
+
+.field-list
+  padding-top: $unit
+  li
+    padding-top: $unit / 2
+    padding-bottom: $unit / 2
+    list-style: none
+    float: left
+    width: 33.33%
+    &:first-child, &:last-child
+      margin: 0
+    i
+      text-align: center
+      width: 100%
+    figcaption
+      text-align: center
+
+@media all and (max-width: 960px)
+  .field-list
+    li
+      width: 50%

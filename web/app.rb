@@ -1,5 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/contrib'
+require 'haml'
+require 'sass'
 
 $LOAD_PATH.push(File.expand_path(File.join(File.dirname(__FILE__), '../')))
 
@@ -17,8 +19,12 @@ class Web < Sinatra::Base
     erb :index, :layout => :home_layout
   end
 
-  post '/mobile' do
-    puts "anda la ostia llega!!"
+  get '/home' do
+    haml :home
   end
+
+  # get '/css/main_style.css' do
+  #   sass :main_style
+  # end
 
 end

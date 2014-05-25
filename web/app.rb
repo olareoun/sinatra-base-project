@@ -16,15 +16,11 @@ class Web < Sinatra::Base
   end
 
   get '/' do
-    erb :index, :layout => :home_layout
+    haml :bla, :layout => :home
   end
 
   get '/home' do
-    haml :home
+    haml :bla, :layout => :home
   end
-
-  # get '/css/main_style.css' do
-  #   sass :main_style
-  # end
 
 end

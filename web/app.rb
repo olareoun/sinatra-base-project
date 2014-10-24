@@ -16,11 +16,7 @@ class Web < Sinatra::Base
   end
 
   get '/' do
-    haml :bla, :layout => :home
-  end
-
-  get '/home' do
-    haml :bla, :layout => :home
+    haml :menu, :layout => :home
   end
 
 end
